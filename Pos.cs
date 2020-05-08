@@ -16,7 +16,8 @@ namespace Andrew.DiscountDemo
 
             cart.TotalPrice = cart.PurchasedItems.Select(p => p.Price).Sum();
 
-            foreach (var discounts in this.ActivatedRules.Select(rule => rule.Process(cart).ToArray()))
+            foreach (var discounts in this.ActivatedRules
+                .Select(rule => rule.Process(cart).ToArray()))
             {
                 cart.AppliedDiscounts.AddRange(discounts);
                 cart.TotalPrice -= discounts.Select(d => d.Amount).Sum();

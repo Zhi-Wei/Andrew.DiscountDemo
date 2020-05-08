@@ -12,7 +12,7 @@ namespace Andrew.DiscountDemo.Rules
         {
             this._minDiscountPrice = minPrice;
             this._discountAmount = discount;
-            this.Name = $"折價券滿 {minPrice} 抵用 {discount}";
+            this.Name = $"消費滿 {minPrice} 折抵 {discount}";
             this.Note = "每次交易限用一次";
         }
 
